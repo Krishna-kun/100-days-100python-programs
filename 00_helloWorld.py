@@ -1,1 +1,8 @@
+'''
+AUTHOR: KRISHNA 
+DATE: 04-09-2026
+
+TOPIC: LEARNING PYTYHON DAY 0
+'''
+
 print("Hello world!")
