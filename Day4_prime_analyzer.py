@@ -52,5 +52,10 @@ while True:
         input("\nPress Enter to continue...")
 
     elif choice==3:
-        num=int(input())
+        numS=int(input("Enter start of range: "))
+        numE=int(input("Enter end of range: "))
+        primelst=primes_in_range(numS,numE)
+        print(f"Total prime numbers in the given range is{primelst}")
+        print(f"Number of prime in the given range:" )
+
 
