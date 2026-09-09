@@ -9,7 +9,7 @@ def findprime(n):
 
 def factors(n):
     fact=[]
-    for i in range(2,num):
+    for i in range(1,num+1):
         if num%i==0:
             fact.append(i)
 
@@ -33,9 +33,10 @@ while True:
     print("3)Get list of all prime numbers in a specific range")
     print("4)exit")
     print("="*35)
-    input("Press enter to continue...")
 
     choice=int(input("Enter your choice[1,2,3,4]: "))
+
+    
 
     if choice==1:
         num=int(input("Enter a number to check to prime or not: "))
@@ -56,6 +57,12 @@ while True:
         numE=int(input("Enter end of range: "))
         primelst=primes_in_range(numS,numE)
         print(f"Total prime numbers in the given range is{primelst}")
-        print(f"Number of prime in the given range:" )
+        print(f"Number of prime in the given range:{primelst}")
+
+    elif choice==4:
+        print("Have a nice day!!...")
+
+    else:
+        print("[!] invalid input")
 
 
