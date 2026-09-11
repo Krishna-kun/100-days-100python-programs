@@ -22,7 +22,7 @@ def Inverted_star_pattern(num):
 def centered_pyramid(num):
     print("\n--->Centered pyramid<---")
     for i in range(1,num+1):
-        for s in range(num-1):
+        for s in range(num-i):
             print(" ",end="")
         for j in range(i):
             print("*",end=" ")
@@ -30,7 +30,7 @@ def centered_pyramid(num):
         
 
 # main loop
-# while True:
+while True:
     print("="*35)
     print("     PATTERN GENERATOR       ")
     print("="*35)
@@ -42,19 +42,20 @@ def centered_pyramid(num):
 
     choose=int(input("Enter you choice [1,2,3,4,]= "))
 
-    if choose in [1,2,3,4,5]:
-        if choose<0:
+    if choose in [1,2,3,4]:
+        rows=int(input("Enter number of rows: "))
+        if rows<0:
             print("[!] Number of rows should be gretter than zero")
         else:
             if choose==1:
-                Star_triangle(choose)
+                Star_triangle(rows)
             elif choose==2:
-                Number_triangle(choose)
+                Number_triangle(rows)
             elif choose==3:
-                Inverted_star_pattern(choose)
+                Inverted_star_pattern(rows)
             elif choose==4:
-                centered_pyramid(choose)
-            elif choose==5:
-                print("Have a nice day...")
+                centered_pyramid(rows)
+    elif choose==5:
+        print("Have a nice day...")
     else:
         print("[!] invalid input...")
