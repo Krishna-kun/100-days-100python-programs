@@ -84,4 +84,5 @@ while True:
     if choose in [1,2,3,4]:
         inputlst=int(input("\nEnter numbers separated by spaces (e.g. 12 5 7 12 8 19):"))
         for num in inputlst:
-            
+            user_num=inputlst.split().strip()
+        return user_num
