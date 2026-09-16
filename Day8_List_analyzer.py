@@ -28,8 +28,8 @@ def rem_dup_sort(number):
         return
     unique_ordered=[]
     for num in number:
-            if not in unique_ordered:
-                unique_ordered.append(num)
+        if num not in unique_ordered:
+            unique_ordered.append(num)
 
     asc_sorted=sorted(unique_ordered)
     desc_sorted=sorted(unique_ordered,reverse=True)
@@ -39,7 +39,7 @@ def rem_dup_sort(number):
     print(f"Sorted (Descending)     :{desc_sorted}\n")
 
 def Filter(number):
-    print("\n--->Remove Duplicate & Sorts<---\n")
+    print("\n--->Filter Even 0dd & primes<---\n")
     if not number:
         print("\n[!] List is empty")
         return
@@ -56,7 +56,7 @@ def Filter(number):
     print(f"Odd list        :{oddlst}")
 
 def slicing_list(number):
-    print("\n--->Remove Duplicate & Sorts<---\n")
+    print("\n--->Slicing & list comprehensions<---\n")
     if not number:
         print("\n[!] List is empty")
         return
@@ -80,9 +80,28 @@ while True:
         choose=int(input("Enter your choice[1,2,3,4,5]:"))
     except ValueError:
         print("[!] Enter valid number...")
+        continue
 
     if choose in [1,2,3,4]:
-        inputlst=int(input("\nEnter numbers separated by spaces (e.g. 12 5 7 12 8 19):"))
-        for num in inputlst:
-            user_num=inputlst.split().strip()
-        return user_num
+        raw_text=input("\nEnter numbers separated by spaces (e.g. 12 5 7 12 8 19):")
+        tokens=raw_text.strip().split()
+        user_numb=[]
+        for items in tokens:
+            user_numb.append(int(items))
+        if choose == 1:
+            basic_stat(user_numb)
+        elif choose == 2:
+            rem_dup_sort(user_numb)
+        elif choose == 3:
+            Filter(user_numb)
+        elif choose == 4:
+            slicing_list(user_numb)
+
+        input("\nPress Enter to continue...")
+        print()
+
+    elif choose == 5:
+        print("\nHave a nice day...")
+        break
+    else:
+        print("\n[!] Invalid choice. Please enter 1 to 5.\n")        
