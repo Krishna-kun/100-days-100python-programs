@@ -49,3 +49,15 @@ def run_analyzer():
         print("=" * 35)
 
         choice = input("Select an option (1-5): ").strip()
+
+if choice == "1":
+            user_input = input("\nEnter text to analyze:\n> ").strip()
+            if not user_input:
+                print("[!] Input cannot be empty.")
+            else:
+                tokens = clean_and_tokenize(user_input)
+                freq = build_word_frequency(tokens)
+                display_table(freq, "WORD", "COUNT")
+                print(f"Total tokens: {len(tokens)} | Unique words: {len(freq)}")
+
+            input("\nPress Enter to continue...")
