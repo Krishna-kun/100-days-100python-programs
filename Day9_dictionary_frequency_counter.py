@@ -1,7 +1,7 @@
 words = ["cat", "dog", "cat"]
 freq = {}
 
-for w in words:
-  freq[w] = freq.get(w, 0) + 1
+for y in words:
+  freq[y] = freq.get(y, 0) + 1
 
-print(w)  # Output: {'cat': 2, 'dog': 1}
+print(y)  # Output: {'cat': 2, 'dog': 1}
